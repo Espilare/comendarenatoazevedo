@@ -30,6 +30,9 @@ def main():
             '<title>Uma homenagem à sua trajetória | Rotary Club de Volta Redonda</title>',
             f'<title>{name} | Comenda Renato Azevedo</title>', 1
         )
+        page = page.replace('property="og:url" content="https://comendarenatoazevedo.vercel.app/"', f'property="og:url" content="https://comendarenatoazevedo.vercel.app/{route}/"', 1)
+        for attribute in ['property="og:title"', 'name="twitter:title"']:
+            page = page.replace(f'{attribute} content="Comenda Renato Frota Rodrigues de Azevedo"', f'{attribute} content="{name} | Comenda Renato Azevedo"', 1)
         page = page.replace('<body>', '<body class="personalized">', 1)
         page = page.replace('</head>', '<meta name="robots" content="noindex, nofollow">\n</head>', 1)
         page = page.replace('COM ESTIMA E RECONHECIMENTO', name, 1)
