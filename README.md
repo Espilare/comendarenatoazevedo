@@ -27,3 +27,9 @@ O gerador atualiza as páginas individuais e a relação administrativa `comenda
 ## Hospedagem
 
 O site é estático e não precisa de compilação. Configure a pasta de publicação como **`comenda-site/dist`**, incluindo suas subpastas. Enviar o código ao GitHub não publica automaticamente o site.
+
+### Vercel
+
+Use a raiz do repositório como **Root Directory** (campo vazio ou `./`) e o preset **Other**. O arquivo `vercel.json` define a saída como `comenda-site/dist` e dispensa instalação e compilação. Não combine essa configuração com Root Directory igual a `comenda-site/dist`.
+
+Depois de corrigir o Root Directory, faça um novo deploy da branch `main`. A home estará em `/` e as páginas dos associados em `/aef/`, `/bb/` etc.
