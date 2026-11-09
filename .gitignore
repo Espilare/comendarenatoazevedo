@@ -1,0 +1,8 @@
+__pycache__/
+*.py[cod]
+comenda-site/tmp/
+comenda-site/site-comenda.zip
+/renato foto (*).png
+.env
+.env.*
+!.env.example
